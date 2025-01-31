@@ -15,18 +15,18 @@ export class Book {
         // абсолютно никак не защищает переменную, которая уже и без того неприкосновенна извне. Все, что мы добавили - 
         // наверное, фундамент для будущей архитектуры, это никак не помогает.
         // Я оставлю это на всякий случай тк это необходимо по условию 2.4, но сомневаюсь, что это нужно
-        Object.defineProperty(this, 'isIssued', {
-            get: () => this.#isIssued,
-            set: (value) => {
-                if (typeof value === 'boolean') {
-                    this.#isIssued = value;
-                } else {
-                    throw new Error('isIssued должно быть boolean');
-                }
-            },
-            configurable: false, 
-            enumerable: true 
-        });
+        // Object.defineProperty(this, 'isIssued', {
+        //     get: () => this.#isIssued,
+        //     set: (value) => {
+        //         if (typeof value === 'boolean') {
+        //             this.#isIssued = value;
+        //         } else {
+        //             throw new Error('isIssued должно быть boolean');
+        //         }
+        //     },
+        //     configurable: false, 
+        //     enumerable: true 
+        // });
     }
 
     get title() {

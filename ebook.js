@@ -24,7 +24,7 @@ export class EBook extends Book {
         if (valid.includes(value)) {
             this.#format = value;
         } else {
-            throw new Error(`Неверный формат: "${value}". Допустимые форматы: ${validFormats.join(', ')}`);
+            throw new Error(`Неверный формат: "${value}". Допустимые форматы: ${valid.join(', ')}`);
         }
     }
 

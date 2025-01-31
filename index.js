@@ -8,6 +8,7 @@ let book1, ebook1;
 
 try {
     book1 = new Book('TestValue1', 'TestAuthor1', 2010);
+    book1.toggleIssue();
 } catch (error) {
     console.log(error.message + ":: Неверно задана книга book1");
 }
@@ -29,12 +30,14 @@ if (ebook1) {
 
 library.listAllBooks();
 
+
 try {
     const foundBook = library.findBook('TestValue1');
     console.log(`Найдена книга: ${foundBook.title}`);
 } catch (error) {
     console.error(error.message);
 }
+
 
 try {
     const foundBook = library.findBook('TestAuthor2', 2000);
